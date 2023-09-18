@@ -1,0 +1,268 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Style */
+/* Navbar */
+.navbar {
+    width: 100%;
+    height: 70px;
+    box-sizing: border-box;
+    padding: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: .7px solid 
+    #e5e7eb;
+    position: fixed;
+    background-color: rgba(246, 248, 253, .9);
+    z-index: 999;
+}   
+
+.navbar .logo h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2e90fa;
+}
+
+.navbar .menu li {
+    font-weight: bold;
+    list-style: none;
+    display: inline-block;
+    background-color: #2e90fa;
+    box-sizing: border-box;
+    width: 80px;
+    text-align: center;
+    padding: 4px;
+    border-radius: 7px;
+    transition: 350ms;
+}
+
+.navbar .menu li a {
+    color: white;
+}
+
+.navbar .menu li:hover {
+    background-color: #1c5fa5;
+    transform: translateY(-3px);
+}
+
+/* Section Intro */
+.intro {
+    width: auto;
+    height: fit-content;
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.intro .intro-left svg {
+    width: 500px;
+}
+
+.intro .intro-right {
+    padding-top: 50px;
+    width: 500px;
+    text-align: left;
+}
+
+.intro .intro-right p:nth-child(1) {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Main */
+.main {
+    padding-block: 40px;
+    padding-inline: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #f6f8fd;
+}
+
+.main-left {
+    text-align: center;
+}
+
+.main-left .form-container {
+    background-color: white;
+    margin-inline: auto;
+    width: 400px;
+    height: fit-content;
+    border: .7px solid #e5e7eb;
+    border-radius: 5px;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, .1);
+    padding: 20px;
+}
+
+.main-left .form-container #description {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.main-left .form-container p:nth-child(2) {
+    margin-bottom: 20px;
+}
+
+.form-container .main-form {
+    text-align: left;
+}
+
+.form-container .main-form label, .form-container .main-form input, button {
+    display: block;
+}
+
+.form-container .main-form label {
+    width: 200px;
+    padding: 10px 10px 2px 0;
+    font-size: 1rem;
+}
+
+.form-container .main-form input, button {
+    width: 100%;
+    height: 35px;
+    border: 1px solid #e5e7eb;
+    margin-inline: auto;
+    border-radius: 7px;
+    padding-inline: 15px;
+    box-sizing: border-box;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #2e90fa;
+    color: white;
+    margin-top: 10px;
+    transition: 350ms;
+}
+
+button:hover {
+    background-color: #1c5fa5;
+    transform: translateY(-3px);
+}
+
+.form-container .main-form input:focus {
+    outline: 1px solid #2e90fa;
+}
+
+.form-container .main-form #status {
+    width: 30px;
+    display: inline-block;
+}
+
+.form-container .main-form #status:focus {
+    outline: none;
+}
+
+.form-container .main-form #check {
+    display: inline-block;
+    width: 350px;
+}
+
+
+.main-right svg {
+    width: 500px;
+}
+
+
+/* Contact */
+.contact {
+    border-top: 1px solid #e5e7eb;
+    width: auto;
+    height: fit-content;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact .contact-number p:nth-child(1), .contact .contact-media p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.contact .contact-media a svg{
+    border-radius: 10px;
+    transition: 350ms;
+}
+
+.contact .contact-media a svg:hover {
+    /* background-color: #ce231c; */
+    background-color: #2e90fa;
+
+}
+
+/* footer */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #e5e7eb;
+    height: 40px;
+    text-align: center;
+}
+
+
+/* Media Query */
+@media (max-width: 500px) {
+    .intro .intro-right {
+        width: 90%;
+    }
+
+    .main-left .form-container {
+        width: 90%;
+    }
+    .form-container .main-form #check {
+        margin-left: 5px;
+        width: 200px;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .intro {
+        padding-top: 0;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 50px;
+    }
+
+    .intro .intro-left {
+        padding-left: 30px;
+    }
+
+    .intro .intro-left svg {
+        width: 90%;
+        margin-inline: auto;
+    }
+
+    .intro .intro-right {
+        margin-top: -100px;
+        padding-top: 0;
+    }
+
+    .main {
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-right svg {
+        display: none;
+    }
+    .contact .contact-number p:nth-child(1), .contact .contact-media p {
+        font-size: 1rem;
+    }
+
+    .contact .contact-media a svg {
+        width: 40px;
+    }
+}
